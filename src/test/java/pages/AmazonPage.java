@@ -7,10 +7,8 @@ import utilities.Driver;
 
 public class AmazonPage {
 
-    public AmazonPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public AmazonPage(){PageFactory.initElements(Driver.getDriver(),this); }
 
-    }
     @FindBy (id="twotabsearchtextbox")
     public WebElement aramaKutusu;
 
