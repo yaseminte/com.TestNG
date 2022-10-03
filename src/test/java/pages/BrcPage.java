@@ -12,18 +12,20 @@ public class BrcPage {
 
     }
 
-    @FindBy (xpath = "//a[@class='btn btn-primary btn-sm']")
+    @FindBy (xpath = "//*[@class='btn btn-primary btn-sm']")
     public WebElement ilkLoginButonu;
 
     @FindBy (xpath = "//input[@name='email']")
     public WebElement emailTextBox;
 
-    @FindBy (xpath = "(//input[@id='formBasicPassword']")
+    @FindBy(xpath = "//*[@id='formBasicPassword']")
     public WebElement passwordTextBox;
 
     @FindBy (xpath = "//button[@type='submit']")
     public WebElement ikinciLoginButtonu;
 
+    @FindBy (xpath = "//*[text()='email must be a valid email']")
+    public WebElement emailMustBeAValidEmailYazisi;
 
 
 }

@@ -25,5 +25,6 @@ public class PozitifLoginTesti {
         brcPage.ikinciLoginButtonu.click();
         // Degerleri girildiginde sayfaya basarili sekilde girilemedigini test et
 
+        Driver.closeDriver();
     }
 }

@@ -29,7 +29,7 @@ public class Driver {
     obje olusturmak icin kullanilan constructor'i private yaptiginizda
     baska class'larda Driver class'indan obje olusturulmasi mumkun OLAMAZ
      */
-    private Driver(){
+    public Driver(){
 
     }
 
@@ -40,10 +40,7 @@ public class Driver {
         if (driver == null) {
 
             switch (ConfigReader.getProperty("browser")) {
-                case "chrome":
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
-                    break;
+
                 case "safari":
                     WebDriverManager.safaridriver().setup();
                     driver = new SafariDriver();

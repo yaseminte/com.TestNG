@@ -7,9 +7,11 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class NegatifLoginTesti {
-    BrcPage brcPage = new BrcPage();
+
     @Test
     public void yanlisSifre() {
+        BrcPage brcPage = new BrcPage();
+
         // Bir test method olustur positiveLoginTest()
         //      https://www.bluerentalcars.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));
@@ -28,6 +30,51 @@ public class NegatifLoginTesti {
         Driver.closeDriver();
     }
     // Bu class'ta 2 test methodu daha olusturun
-    // biri yanlisLullaniciAdi
+    // biri yanlisKullaniciAdi
+
+    @Test
+    public void yanlisKullaniciAdi() {
+        BrcPage brcPage = new BrcPage();
+
+        //      https://www.bluerentalcars.com/ adresine git
+        Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));
+        //      login butonuna bas
+        brcPage.ilkLoginButonu.click();
+        // test data user email : clientbluerentalcars.com ,
+        brcPage.emailTextBox.sendKeys(ConfigReader.getProperty("brcWrongUsername"));
+        // test data password : 12345
+        //brcPage.passwordTextBox.sendKeys(ConfigReader.getProperty("brcValidPassword"));
+        // login butonuna tiklayin
+        //brcPage.ikinciLoginButtonu.click();
+        // Degerleri girildiginde sayfaya basarili sekilde girilemedigini test et
+
+        Assert.assertTrue(brcPage.emailMustBeAValidEmailYazisi.isDisplayed());
+
+        Driver.closeDriver();
+    }
+
+
     // digeri de yanlis sifre ve kullanici adi
+
+
+    @Test
+    public void yanlisSifreVeKullaniciAdi() {
+        BrcPage brcPage = new BrcPage();
+
+        //      https://www.bluerentalcars.com/ adresine git
+        Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));
+        //      login butonuna bas
+        brcPage.ilkLoginButonu.click();
+        // test data user email : clientbluerentalcars.com ,
+        brcPage.emailTextBox.sendKeys(ConfigReader.getProperty("brcWrongUsername"));
+        // test data password : 12345
+        brcPage.passwordTextBox.sendKeys(ConfigReader.getProperty("brcWrongPassword"));
+        // login butonuna tiklayin
+        // brcPage.ikinciLoginButtonu.click();
+        // Degerleri girildiginde sayfaya basarili sekilde girilemedigini test et
+
+        Assert.assertFalse(brcPage.ilkLoginButonu.isSelected());
+
+        Driver.closeDriver();
+    }
 }
