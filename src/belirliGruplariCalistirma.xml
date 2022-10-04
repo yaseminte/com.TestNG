@@ -17,6 +17,7 @@
     <test name="belirliTestMethodlariCalistirma gruplar">
         <groups>
             <run>
+                <exclude name="grup2"></exclude>
                 <include name="grup1"></include>
             </run>
         </groups>
