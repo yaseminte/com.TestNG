@@ -4,15 +4,14 @@ import org.testng.annotations.Test;
 import pages.BrcPage;
 import utilities.ConfigReader;
 import utilities.Driver;
-import utilities.TestBaseRapor;
 
-public class C03_PozitifLoginTestiRaporu extends TestBaseRapor {
+public class C03_PozitifLoginTestiRaporu {
 
     BrcPage brcPage = new BrcPage();
 
     @Test
     public void pozitifLoginTest() {
-    //    extendTest = extentReports.createTest("Pozitif Login","Gecrli username ve sifre");
+     //   extendTest = extentReports.createTest("Pozitif Login","Gecrli username ve sifre");
         // Bir test method olustur positiveLoginTest()
         //      https://www.bluerentalcars.com/ adresine git
         Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));

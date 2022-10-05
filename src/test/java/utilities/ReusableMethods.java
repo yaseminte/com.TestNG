@@ -17,7 +17,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.function.Function;
 public class ReusableMethods {
-    //========ScreenShot(Sayfanın resmini alma)=====//
+    //========ScreenShot(Syafanın resmini alma)=====//
     public static String getScreenshot(String name) throws IOException {
         // naming the screenshot with the current date to avoid duplication
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
