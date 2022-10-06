@@ -11,7 +11,7 @@ import utilities.TestBaseCross;
 
 public class C01_AssertionsCross extends TestBaseCross {
 
-    @Test (groups = "grup2")
+    @Test
     public void test01() {
 
         // 1- amazon anasayfaya gidin
