@@ -28,7 +28,7 @@ public class C02_SoftAssertCross extends TestBaseCross {
         // 4- arama kutusuna nutella yazip aratin
         aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
         // 5- arama yapildigini test edin
-        WebElement sonucYaziElementi = driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
+        WebElement sonucYaziElementi = driver.findElement(By.xpath("(//div[@class='sg-col-inner'])[1]"));
         softAssert.assertTrue(sonucYaziElementi.isDisplayed(),"arama yapilamadi");
         // 6- arama sonucunun Nutella icerdigini test edin
         softAssert.assertTrue(sonucYaziElementi.getText().contains("Nutella"),"sonuc yazisi Kutella icermiyor");

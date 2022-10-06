@@ -30,7 +30,7 @@ public class CrossDriver {
                     driver = new SafariDriver();
                     break;
                 case "firefox":
-                    WebDriverManager.firefoxdriver();
+                    WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
                 case "edge":

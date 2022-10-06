@@ -25,11 +25,11 @@ public class C06_SoftAssert extends TestBase {
         // 1- amazon anasayfaya gidin
         driver.get("https://www.amazon.com");
         // 2- title'in Amazon icerdigini test edin
-        String expectedTitle = "amazon";
+        String expectedTitle = "Amazon";
         String actualTitle = driver.getTitle();
         softAssert.assertTrue(actualTitle.contains(expectedTitle),"title amazon icermiyor");
         // 3- Arama kutusunun erisilebilir oldugunu test edin
-        WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
+        WebElement aramaKutusu = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
         softAssert.assertTrue(aramaKutusu.isEnabled(),"arama kutusuna erisilemiyor");
         // 4- arama kutusuna nutella yazip aratin
         aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
@@ -37,7 +37,7 @@ public class C06_SoftAssert extends TestBase {
         WebElement sonucYaziElementi = driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
         softAssert.assertTrue(sonucYaziElementi.isDisplayed(),"arama yapilamadi");
         // 6- arama sonucunun Nutella icerdigini test edin
-        softAssert.assertTrue(sonucYaziElementi.getText().contains("Kutella"),"sonuc yazisi Kutella icermiyor");
+        softAssert.assertTrue(sonucYaziElementi.getText().contains("Nutella"),"sonuc yazisi Nutella icermiyor");
 
         // softassert'e bitis satirini soylemek icin assertAll() kullanilir
         // bu satir yazilmazsa assertion gorevi yapilmamis olur
