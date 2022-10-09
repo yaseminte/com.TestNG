@@ -7,11 +7,11 @@
     Eger calisacak spesifik method'lari belirtmek istersek include
     calismayacak spesifik methodlari belirtmek istersek exclude keyword'leri kullanilir.
 
-    Eger method'lar dependsOnMEthods ile birbirine baglanmissa
-    xml dosyasi calisirken celiski olusmamsi lazim
+    Eger method'lar dependsOnMethods ile birbirine baglanmissa
+    xml dosyasi calisirken celiski olusmamasi lazim
     celiski durumunda selenium testleri calistirmaz.
 
-    suite tag'inin icine yaziilacak verbose attribute
+    suite tag'inin icine yazilacak verbose attribute
     konsolda cikan mesajlarin daha az veya daha cok olmasini belirler
     1 en az
     10 en cok

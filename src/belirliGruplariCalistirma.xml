@@ -1,15 +1,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="belirliTestMethodlariCalistirma grupla">
     <!-- 
-    xml dosyalar dosyalar calistiracagimiz suite,
+    xml dosyalar calistiracagimiz suite,
     test veya diger secenekleri bir goreve gore gruplandirma icin de kullanilabilir 
     
     Bu durumda calisacak tum test method'larini veya class'lari 
     tek tek xml dosyasina tanimlamak yerine 
-    framework'umuze istedigimiz test merhod'larini 
+    framework'umuze istedigimiz test method'larini
     istedigimiz gruplara dahil edebiliriz 
     
-    bunu yapabilmek icin once test methodlarimizi istedigimiz gruplara dahil edereksonra xml dosyasinda
+    bunu yapabilmek icin once test methodlarimizi istedigimiz gruplara dahil ederek sonra xml dosyasinda
         1- hangi gruplar calisacak/calismayacak 
         2- bu gruplar hangi package altinda aranacak 
     -->
